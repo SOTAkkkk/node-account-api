@@ -1,23 +1,16 @@
 {
-  "name": "account-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-account-api",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SOTAkkkk/node-account-api.git"
-  },
-  "author": "SOTAkkkk",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SOTAkkkk/node-account-api/issues"
-  },
-  "homepage": "https://github.com/SOTAkkkk/node-account-api#readme",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
     "mysql2": "^3.6.1"
   }
 }
