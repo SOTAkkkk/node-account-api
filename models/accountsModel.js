@@ -14,9 +14,17 @@ async function createAccount(name) {
     await connection.execute('INSERT INTO `accounts` (`name`, `created_at`, `updated_at`) VALUES (?, NOW(), NOW())', [name]);
 }
 
+async function updateAccount(id, name) {
+    const connection = await db.getConnection();
+    await connection.execute('UPDATE `accounts` SET `name` = ? WHERE `id` = ?', [name, id])
+}
 
+async function deleteAccount(id) {
+    const connection = await db.getConnection();
+    await connection.execute('DELETE FROM `accounts` WHERE `id` = ?', [id])
+}
 
 // モジュールとして使えるように関数をエクスポート
 module.exports = {
-    getAllAccounts, createAccount
+    getAllAccounts, createAccount, updateAccount, deleteAccount
 };

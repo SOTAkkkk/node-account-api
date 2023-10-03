@@ -3,8 +3,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexController = require('./controllers/index');
-const usersController = require('./controllers/users');
+const indexController = require('./controllers/indexController');
+const usersController = require('./controllers/usersController');
 
 const app = express();
 
